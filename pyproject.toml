@@ -1,0 +1,56 @@
+# This repository is essentially a Sphinx repository, not a code repository.
+# Documentation versioning and configuration will all be done in `conf.py`,
+# and documentation source files and static assets will be located in and
+# organised from the root of the repository.
+# 
+# No build system metadata is required in this TOML as it only serves as a
+# place to define docs dependencies for the repo package manager, which is
+# Astral UV. 
+
+
+[project]
+name = "PlatformDocs"
+version = "v1.0"
+
+description = "Integration documentation for the ISARIC Clinical Epidemiology Platform."
+
+authors = [
+    { name = "ISARIC Data Team", email = "data@isaric.org" },
+    { name = "Sandeep Murthy", email = "sandeep.murthy@ndm.ox.ac.uk" }
+]
+
+maintainers = [
+    { name = "ISARIC Data Team", email = "data@isaric.org" },
+    { name = "Sandeep Murthy", email = "sandeep.murthy@ndm.ox.ac.uk" },
+]
+
+readme = "README.md"
+
+keywords = [
+    "isaric",
+    "infectious-diseases",
+    "disease-outbreaks",
+    "clinical-data",
+    "clinical-epidemiology",
+    "data-analysis",
+    "data-analytics",
+]
+
+requires-python = ">=3.12"
+
+# No pinning required for the moment, but this could change.
+dependencies = [
+    "Sphinx",
+    "sphinx-autobuild",
+    "sphinx-copybutton",
+    "sphinx-gallery",
+    "sphinx-design",
+    "myst-parser",
+    "pylint",
+    "furo",
+    "numpydoc",
+    "nb2plots",
+    "jupyter-sphinx"
+]
+
+[project.optional-dependencies]
